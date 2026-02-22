@@ -16,7 +16,7 @@ def main():
         print("Iniciando organización...")
         root = tk.Tk()
         root.title("BioByte Organizer")
-        imagen = tk.PhotoImage(file="./images/folder2.png")
+        imagen = tk.PhotoImage(file="./images/logoBio.png")
         root.wm_iconphoto(False, imagen)
 
         centrar_ventana(root, 800, 620)
