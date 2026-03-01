@@ -137,8 +137,8 @@ class App(tk.Frame):
                 messagebox.showinfo(title='Seleccionar carpeta', message=f'Se selecciono la carpeta: {carpeta}')
 
         self.rutaLabel = ctk.CTkLabel(self.contenedor2, textvariable=self.ruta_var,
-                                      text_color='gray', font=('Arial', 14, 'bold'),
-                                      )
+            text_color='gray', font=('Arial', 14, 'bold'),
+            )
         self.rutaLabel.grid(row=0, column=1, padx=20, pady=10, sticky='w')
 
         self.select_folder = ctk.CTkButton(
@@ -197,6 +197,20 @@ class App(tk.Frame):
                                              text_color='black',
                                              font=('Arial', 12), anchor='center')
         self.label_Reglas_Otr.grid(row=5, column=0, padx=10, pady=0, sticky='nsew')
+
+        reglas = [
+            ".pdf .docx  ➡  /Documentos",
+            ".img .png .jpg  ➡  /Imágenes",
+            ".mp4 .avi .mkv .webm  ➡  /Videos",
+            ".mp3 .acc .ogg .wav  ➡  /Música",
+            ".xyz .abc .jaja .jeje  ➡  /Otros"
+        ]
+
+        for i, texto in enumerate(reglas, start=1):
+            ctk.CTkLabel(
+                self.contenedor31, text=texto, text_color='black', font=('Arial', 12)
+            ).grid(row=i, column=0, padx=10, pady=2)
+
 
         # DIV DE OPCIONES
         self.contenedor32 = ctk.CTkFrame(self.contenedor3, bg_color=colores['bg_cont'], fg_color=colores['bg_cont'],
