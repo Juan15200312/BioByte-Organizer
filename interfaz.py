@@ -137,8 +137,9 @@ class App(tk.Frame):
                 messagebox.showinfo(title='Seleccionar carpeta', message=f'Se selecciono la carpeta: {carpeta}')
 
         self.rutaLabel = ctk.CTkLabel(self.contenedor2, textvariable=self.ruta_var,
-            text_color='gray', font=('Arial', 14, 'bold'),
-            )
+                                    text_color='gray', font=('Arial', 14, 'bold'),
+                                    )
+
         self.rutaLabel.grid(row=0, column=1, padx=20, pady=10, sticky='w')
 
         self.select_folder = ctk.CTkButton(
